@@ -1,6 +1,8 @@
 # Bank Management System
 
-This project is a **Bank Management System** implemented in C++. It provides functionalities to manage clients' data, including adding, updating, deleting, and listing client records. The data is stored in a text file (`ClientsRecord.txt`) for persistence.
+This project is a **Bank Management System** implemented in C++. It provides functionalities to manage clients' data, including adding, updating, deleting, and listing client records. The data is stored in a text file (`ClientsRecord.txt`) for persistence. This is the first version of the system, and a second version with additional features, titled **Bank Extension**, is planned.
+
+---
 
 ## Features
 
@@ -11,13 +13,20 @@ This project is a **Bank Management System** implemented in C++. It provides fun
 5. **Find Client:** Search for a client by their account number and display their details.
 6. **Persistent Storage:** Client data is saved and loaded from `ClientsRecord.txt`.
 
+---
+
 ## File Structure
 
-- `Bank_Project.cpp`: Main source code containing all the program logic.
-- `ClientsRecord.txt`: File where client data is stored in the format `AccountNumber#//#PinCode#//#Name#//#Phone#//#Balance`.
-- `.gitignore`: Standard Git ignore file.
-- `README.md`: Project documentation (this file).
-- `Bank_Project.sln`: Solution file for Visual Studio.
+- **`Bank_Project.cpp`:** Main source code containing all the program logic.
+- **`ClientsRecord.txt`:** File where client data is stored in the format:
+  ```
+  AccountNumber#//#PinCode#//#Name#//#Phone#//#Balance
+  ```
+- **`.gitignore`:** Standard Git ignore file.
+- **`README.md`:** Project documentation (this file).
+- **`Bank_Project.sln`:** Solution file for Visual Studio.
+
+---
 
 ## How It Works
 
@@ -47,20 +56,24 @@ struct stClient {
 };
 ```
 
-### Functions
+### Core Functions
 
-- **Data Manipulation:**
-  - `AddNewClient()`
-  - `DeleteClientByAccountNumber()`
-  - `UpdateClientByAccountNumber()`
-- **File Handling:**
-  - `LoadDataFromFileToVector()`
-  - `SaveClientDataToFile()`
-  - `AddDataLineToFile()`
-- **Utility Functions:**
-  - `SpiltEachWord()`: Splits a string by a delimiter.
-  - `ConvertLineToRecord()`: Converts a line from the file into a `stClient` object.
-  - `ConvertRecordToLine()`: Converts a `stClient` object into a formatted string.
+#### Data Manipulation:
+- `AddNewClient()`
+- `DeleteClientByAccountNumber()`
+- `UpdateClientByAccountNumber()`
+
+#### File Handling:
+- `LoadDataFromFileToVector()`
+- `SaveClientDataToFile()`
+- `AddDataLineToFile()`
+
+#### Utility Functions:
+- `SpiltEachWord()`: Splits a string by a delimiter.
+- `ConvertLineToRecord()`: Converts a line from the file into an `stClient` object.
+- `ConvertRecordToLine()`: Converts an `stClient` object into a formatted string.
+
+---
 
 ## How to Run
 
@@ -69,10 +82,9 @@ struct stClient {
 3. Build and run the project.
 4. Use the main menu to navigate through the application.
 
-## Example
+### Example Usage
 
-### Adding a New Client
-
+#### Adding a New Client:
 1. Select **Add New Client** from the menu.
 2. Enter the following details:
    - Account Number
@@ -82,10 +94,11 @@ struct stClient {
    - Account Balance
 3. The client will be added to `ClientsRecord.txt`.
 
-### Listing Clients
-
+#### Listing Clients:
 1. Select **Show Client List** from the menu.
 2. View all clients in a table format.
+
+---
 
 ## Data Format
 
@@ -95,21 +108,25 @@ The client data is stored in `ClientsRecord.txt` with the following format:
 AccountNumber#//#PinCode#//#Name#//#Phone#//#Balance
 ```
 
-Example:
+### Example:
 
 ```
 123456#//#1234#//#John Doe#//#1234567890#//#1500.75
 234567#//#5678#//#Jane Smith#//#9876543210#//#2500.50
 ```
 
+---
+
 ## Dependencies
 
-- C++ Standard Library
+- **C++ Standard Library**:
   - `<iostream>`: For input/output operations.
   - `<vector>`: To store and manage the list of clients.
   - `<string>`: For string manipulation.
   - `<fstream>`: For file handling.
   - `<iomanip>`: For formatted output.
+
+---
 
 ## Future Enhancements
 
@@ -118,7 +135,15 @@ Example:
 3. Enhance the user interface with a graphical UI.
 4. Encrypt client data for added security.
 
+---
+
 ## Author
 
 This project was developed by **KhalidSyntax**. Feel free to contribute or suggest improvements!
+
+---
+
+## Note
+
+This is the first version of the Bank Management System. A second version, called **Bank Extension**, will be uploaded soon with additional features and improvements.
 
